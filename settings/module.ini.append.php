@@ -3,5 +3,6 @@
 
 [ModuleSettings]
 ExtensionRepositories[]=starrating
+ModuleList[]=starrating
 
 */ ?>

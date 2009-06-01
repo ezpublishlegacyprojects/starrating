@@ -15,7 +15,7 @@ Rating: <strong><span id="average_{$attribute.id}">{$rating.rounded_average|wash
 <p id="has_rated_{$attribute.id}">{if $rating.has_rated}Thank you for your rating!{/if}</p>
 {if $rating.has_rated|not}
 {def $hasXajaxAccess=fetch('user','has_access_to',hash('module','xajax','function','all'))}
-{if $hasXajaxAccess}{run-once}{xajax_javascript()}{/run-once}{/if}
+{if $hasXajaxAccess}
 {run-once}{xajax_javascript()}{/run-once}
 <script type="text/javascript">
 
@@ -39,4 +39,5 @@ Rating: <strong><span id="average_{$attribute.id}">{$rating.rounded_average|wash
  {rdelim}
 
 </script>
+{/if}
 {/if}
